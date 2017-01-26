@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" />
+</head>
+
+<body>
+  <div id='timeline-embed' style="width: 100%; height: 600px"></div>
+</body>
+
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+  <script type="text/javascript">
+    function make_the_json() {
+      return {
+        "title": {
+          "media": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg",
+            "caption": "Donald John Trump, 45th President of the United States.",
+            "credit": " Executive Office of the President of the United States"
+          },
+          "text": {
+            "headline": "Donald Trump: 45th President of the USA. 20th January, 2017 - ?",
+            "text": "<p>Donald John Trump (born June 14, 1946) is an American businessman, television personality, politician, and the 45th President of the United States.</p>"
+          }
+        },
+        "events": [
+          {
+            "media": {
+              "url": "https://timedotcom.files.wordpress.com/2017/01/chris-morris-donald-trump-inauguration-oath.jpg",
+              "caption": "President Donald Trump takes the oath of office alongside his wife, Melania, at the Capitol in Washington on Jan. 20, 2017.",
+              "credit": "Christopher Morris—VII for <a href='http://time.com/president-donald-trump-inauguration-day-photos/'>TIME</a>"
+            },
+            "start_date": {
+              "month": "1",
+              "day": "20",
+              "year": "2017"
+            },
+            "text": {
+              "headline": "Inauguration Day",
+              "text": "<p>On the 20th January, 2017, Donald Trump is sworn in to become the 45th US President, despite losing the popular vote by more than 2.8 million votes. The election saw an all time low voter turn out of 53%.</p>"
+            }
+          }]
+      }
+    }
+    var timeline_json = make_the_json(); // you write this part
+    // two arguments: the id of the Timeline container (no '#')
+    // and the JSON object or an instance of TL.TimelineConfig created from
+    // a suitable JSON object
+    console.log(timeline_json)
+    window.timeline = new TL.Timeline('timeline-embed', timeline_json);
+  </script>
+</html>
